@@ -7,11 +7,6 @@ const lengthEl = document.getElementById("pdlengt");
 const passwordEL = document.getElementById("pd");
 const clipboardEl = document.getElementById("clip");
 
-// let gSymbol   = " ";
-// let gNum      = " ";
-// let gLower    = " ";
-// let gUpper    = " ";
-// let Symbol    = "";
 const randomFunc = {
   lower: getrandomLowercase,
   upper: getrandomUppercase,
@@ -84,51 +79,6 @@ clipboardEl.addEventListener("click", () => {
   textarea.remove();
   alert("password copied to clipboard");
 });
-
-// function check() {
-//   let u = upper.checked;
-//   let l = lower.checked;
-//   let n = number.checked;
-//   let s = symbol.checked;
-
-//   let result = u + l + n + s;
-//   console.log(result);
-//   return result;
-// }
-
-// btnEL.addEventListener("click", () => {
-//   if (upper.checked) {
-//     for (let index = 0; index < Math.floor(length.value / check()); index++) {
-//       gUpper += getrandomUppercase();
-//     }
-//   }
-//   if (lower.checked) {
-//     for (let index = 0; index < Math.floor(length.value / check()); index++) {
-//       gLower += getrandomLowercase();
-//     }
-//   }
-//   if (number.checked) {
-//     for (let index = 0; index < Math.floor(length.value / check()); index++) {
-//       gNum += getrandomnumbers();
-//     }
-//   }
-//   if (symbol.checked) {
-//     for (let index = 0; index < Math.floor(length.value / check()); index++) {
-//       gSymbol += getrandomsymbols();
-//     }
-//   }
-
-//   passwordG.value = gUpper + gLower + gNum + gSymbol;
-//   let realLength = passwordG.value.length - 4;
-//   if (symbol.checked) {
-//     for (let index = 0; index < length.value - realLength; index++) {
-//       Symbol += getrandomsymbols();
-//     }
-//   }
-//   passwordG.value = gUpper + gLower + gNum + gSymbol + Symbol;
-//   console.log(passwordG.value.length);
-//   check();
-// });
 lengthEl.addEventListener("click", () => {
   passwordEL.value = "";
   lengthEl.value = "";
